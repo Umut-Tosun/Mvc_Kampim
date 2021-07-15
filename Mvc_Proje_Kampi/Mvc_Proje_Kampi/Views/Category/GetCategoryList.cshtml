@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete;
+@model List<Category>
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<table class="table table-dark">
+    <tr>
+        <th>KATEGORİ ID</th>
+        <th>KATEGORİ AD</th>
+        <th>Durum</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.CategoryID</td>
+            <td>@x.CategoryName</td>
+            <td>@x.CategoryStatus</td>
+            <td><button class="btn-success">Güncelle</button></td>
+            <td><button class="btn-danger">Sil</button></td>
+        </tr>
+    }
+</table>
+<a href="/Category/AddCategory"class="btn btn-info">Yeni Kategori</a>
