@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
             return _MessageDal.list(x=>x.SenderMail== "admin@gmail.com");
         }
 
+        public void IsRead(Message Message)
+        {
+            _MessageDal.update(Message);
+        }
+
         public void MessageAdd(Message CMessage)
         {
             _MessageDal.insert(CMessage);

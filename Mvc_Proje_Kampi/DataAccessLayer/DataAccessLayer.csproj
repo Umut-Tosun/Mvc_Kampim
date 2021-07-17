@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IAboutDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
@@ -59,18 +60,21 @@
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\ISkillDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfSkillDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202106231258245_mig1.cs" />
     <Compile Include="Migrations\202106231258245_mig1.designer.cs">
@@ -115,6 +119,18 @@
     <Compile Include="Migrations\202107141301522_add-admintable.cs" />
     <Compile Include="Migrations\202107141301522_add-admintable.designer.cs">
       <DependentUpon>202107141301522_add-admintable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107160852198_add_skillcard.cs" />
+    <Compile Include="Migrations\202107160852198_add_skillcard.designer.cs">
+      <DependentUpon>202107160852198_add_skillcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107161011413_add-AboutStatus.cs" />
+    <Compile Include="Migrations\202107161011413_add-AboutStatus.designer.cs">
+      <DependentUpon>202107161011413_add-AboutStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107161046417_add-Isread.cs" />
+    <Compile Include="Migrations\202107161046417_add-Isread.designer.cs">
+      <DependentUpon>202107161046417_add-Isread.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,6 +178,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107141301522_add-admintable.resx">
       <DependentUpon>202107141301522_add-admintable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107160852198_add_skillcard.resx">
+      <DependentUpon>202107160852198_add_skillcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107161011413_add-AboutStatus.resx">
+      <DependentUpon>202107161011413_add-AboutStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107161046417_add-Isread.resx">
+      <DependentUpon>202107161046417_add-Isread.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

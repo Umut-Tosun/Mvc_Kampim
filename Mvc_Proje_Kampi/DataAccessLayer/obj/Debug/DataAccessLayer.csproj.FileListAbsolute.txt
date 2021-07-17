@@ -36,3 +36,6 @@ C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\bin\Debug\S
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.gallery.resources
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addadmintable.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.add_skillcard.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addAboutStatus.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addIsread.resources

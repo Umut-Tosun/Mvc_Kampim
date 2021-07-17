@@ -143,6 +143,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Controllers\İstatistikController.cs" />
@@ -2409,6 +2411,19 @@
     <Content Include="login-form-19\scss\bootstrap\_utilities.scss" />
     <Content Include="login-form-19\scss\bootstrap\_variables.scss" />
     <Content Include="login-form-19\scss\style.scss" />
+    <Content Include="Views\Skill\GÖRSEL.jpg" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\images\100.jpg" />
+    <Content Include="web\images\5.jpg" />
+    <Content Include="web\images\img1.jpg" />
+    <Content Include="web\images\sprite.png" />
+    <Content Include="web\index.html" />
+    <Content Include="web\js\bars.js" />
+    <Content Include="web\js\easyResponsiveTabs.js" />
+    <Content Include="web\js\jquery-1.11.1.min.js" />
+    <Content Include="web\js\jquery.circlechart.js" />
+    <Content Include="web\w3layouts-License.txt" />
+    <Content Include="Ödev Görsel\Ödev.PNG" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2468,6 +2483,8 @@
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

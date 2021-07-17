@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void AboutDelete(About About)
         {
-            _AboutDal.delete(About);
+            _AboutDal.update(About);
         }
 
         public void AboutUpdate(About About)

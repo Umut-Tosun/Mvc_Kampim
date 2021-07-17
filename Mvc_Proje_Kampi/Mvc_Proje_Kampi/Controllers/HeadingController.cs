@@ -15,6 +15,7 @@ namespace Mvc_Proje_Kampi.Controllers
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
         WriterManager wm = new WriterManager(new EfWriterDal());
+        [Authorize(Roles ="A")]
         public ActionResult Index()
         {
             var HeadingValues = hm.GetList();
@@ -68,7 +69,14 @@ namespace Mvc_Proje_Kampi.Controllers
         public ActionResult DeleteHeading(int id)
         {
             var HeadingValue = hm.GetByID(id);
-            HeadingValue.HeadingStatus = false;
+            if (HeadingValue.HeadingStatus==true)
+            {
+                HeadingValue.HeadingStatus = false;
+            }
+            else
+            {
+                HeadingValue.HeadingStatus = true;
+            }
             hm.HeadingDelete(HeadingValue);
             return RedirectToAction("Index");
         }

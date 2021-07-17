@@ -19,6 +19,7 @@ namespace Mvc_Proje_Kampi.Controllers
        
         public ActionResult Inbox()
         {
+            ViewBag.vl = mm.GetListInbox().Where(x => x.IsRead == false).LongCount();
             var messagelist = mm.GetListInbox();
             return View(messagelist);
         }
@@ -62,6 +63,17 @@ namespace Mvc_Proje_Kampi.Controllers
                 }
             }
             return View();
+        }
+        public ActionResult IsRead(int id)
+        {
+            var HeadingValue = mm.GetByID(id);
+            if (HeadingValue.IsRead == false)
+            {
+                HeadingValue.IsRead = true;
+            }
+           
+            mm.IsRead(HeadingValue);
+            return RedirectToAction("Inbox");
         }
     }
 }

@@ -3,7 +3,8 @@
     ViewBag.Title = "GetInboxMessageDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
+@{ string message = "";}
+@{ string color = "";}
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +15,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Gelen Mesaj Detayları</h1>
-                </div>               
+                </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -34,25 +35,48 @@
                             </div>
                         </div>
                         <!-- /.card-header -->
-                        <div class="card-body p-0">
-                            <div class="mailbox-read-info">
-                                <h5>Konu : @Model.subject</h5>
-                                <h6>
-                                    Mail : @Model.SenderMail
-                                    <span class="mailbox-read-time float-right">@Model.MessageDate.ToString("dd-MMM-yyyy")</span>
-                                </h6>
-                            </div>
-                            <!-- /.mailbox-read-info -->
-                          
-                            <!-- /.mailbox-controls -->
-                            <div class="mailbox-read-message">
-                                <p>@Model.MessageContent</p>
-
-                            </div>
-                            <!-- /.mailbox-read-message -->
+                       
+                            @if ( @Model.IsRead == false)
+                            {
+                                message = "Okundu olarak İşaretle";
+                                color = "btn btn-info btn-sm";
+                            }
+                            @if (@Model.IsRead == true)
+                            {
+                                message = "Okundu olarak İşaretlendi";
+                                color = "btn btn-danger btn-sm";
+                            }
+                        
+                    <div class="card-body p-0">
+                        <div class="mailbox-read-info">
+                            <h5>Konu : @Model.subject</h5>
+                            <br />
+                            <h6>
+                                Mail : @Model.SenderMail
+                                <span class="mailbox-read-time float-right">@Model.MessageDate.ToString("dd-MMM-yyyy")</span>
+                            </h6>
                         </div>
-                        <!-- /.card-footer -->
+                        <!-- /.mailbox-read-info -->
+                        <!-- /.mailbox-controls -->
+                        <div class="mailbox-read-message">
+                            <p>@Model.MessageContent</p>
+
+                        </div>
+                        <div>
+                            @if (Model.IsRead == false)
+                            {
+                                <a href="/Message/IsRead/@Model.MessageID" class="@color">@message</a>
+                            }
+                            @if (Model.IsRead == true)
+                            {
+                                <a class="@color">@message</a>
+                            }
+
+                        </div>
+                        <!-- /.mailbox-read-message -->
                     </div>
+                            <!-- /.card-footer -->
+                        </div>
                     <!-- /.card -->
                 </div>
                 <!-- /.col -->
