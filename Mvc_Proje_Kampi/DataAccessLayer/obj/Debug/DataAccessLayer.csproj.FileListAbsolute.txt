@@ -39,3 +39,7 @@ C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\D
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.add_skillcard.resources
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addAboutStatus.resources
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addIsread.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.son.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.test.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.test2.resources
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.talent.resources

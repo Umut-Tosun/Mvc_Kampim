@@ -28,7 +28,8 @@ namespace Mvc_Proje_Kampi.Controllers
         }
         public PartialViewResult ContactPartial()
         {
-            ViewBag.value = c.Messages.Where(x=>x.RecevierMail=="admin@gmail.com").Count();
+            string p = (string)Session["WriterMail"];
+            ViewBag.value = c.Messages.Where(x=>x.RecevierMail==p).Count();
             ViewBag.value2 = c.Contacts.Count();
             return PartialView();
         }

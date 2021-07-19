@@ -22,5 +22,10 @@ namespace BusinessLayer.Concrete
         {
             return imageFileDal.list();
         }
+
+        public void ImageAdd(ImageFile imageFile)
+        {
+            imageFileDal.insert(imageFile);
+        }
     }
 }

@@ -18,9 +18,12 @@ namespace BusinessLayer.Concrete
             _skillDal = skillDal;
         }
 
+      
         public List<Skillcard> GetList()
         {
             return _skillDal.list();
         }
+
+    
     }
 }

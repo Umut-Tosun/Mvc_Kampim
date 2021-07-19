@@ -19,13 +19,15 @@ namespace Mvc_Proje_Kampi.Controllers
        
         public ActionResult Inbox()
         {
-            ViewBag.vl = mm.GetListInbox().Where(x => x.IsRead == false).LongCount();
-            var messagelist = mm.GetListInbox();
+           string  p = (string)Session["AdminUserName"];
+            ViewBag.vl = mm.GetListInbox(p).Where(x => x.IsRead == false).LongCount();
+            var messagelist = mm.GetListInbox(p);
             return View(messagelist);
         }
         public ActionResult SendBox()
         {
-            var messagelist = mm.GetListSendBox();
+            string p = (string)Session["AdminUserName"];
+            var messagelist = mm.GetListSendBox(p);
             return View(messagelist);
             
         }

@@ -92,3 +92,7 @@ C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\EntityL
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\EntityLayer.dll.config
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\FluentValidation.dll
 C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\FluentValidation.xml
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\PagedList.dll
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\PagedList.Mvc.dll
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\PagedList.xml
+C:\Users\Teknosa Casper\source\repos\Mvc_Proje_Kampi\Mvc_Proje_Kampi\bin\PagedList.Mvc.xml

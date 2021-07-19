@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+<h1 style="text-align:center">İstatistikler</h1>
+<br />
+<br />
+<html>
+<head>
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="small-box bg-success">
+                <div class="inner" style="text-align: center;background-color:chartreuse">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.deger</sup></h3>
+                    <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
+                </div>  <a href="#" class="small-box-footer"></a>
+            </div>
+        </div>
+        e<div class="col-md-3">
+            <div class="small-box bg-red">
+                <div class="inner" style="text-align: center;background-color:#ff0000">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.deger4</sup></h3>
+                    <sup style="font-size: 20px">Yazılım Kategorisi Başlık Sayısı</sup>
+                </div><a href="#" class="small-box-footer"></a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="small-box bg-purple">
+                <div class="inner" style="text-align: center;background-color:#0df8dc">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.deger5</sup></h3>
+                    <sup style="font-size: 20px">Yazar adında a harfi geçen yazar sayısı</sup>
+                </div><a href="#" class="small-box-footer"></a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="small-box bg-blue">
+                <div class="inner" style="text-align: center;background-color:#de6bff">
+                    <br />
+                    <h3><sup style="font-size: 40px">@ViewBag.deger6</sup></h3>
+                    <sup style="font-size: 20px">En fazla başlığa sahip kategori adı</sup>
+                </div> <a href="#" class="small-box-footer"></a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="small-box bg-orange">
+                <div class="inner" style="text-align: center;background-color:#ff0580">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.deger3</sup></h3>
+                    <sup style="font-size: 20px"> Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark</sup>
+                </div><a href="#" class="small-box-footer"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

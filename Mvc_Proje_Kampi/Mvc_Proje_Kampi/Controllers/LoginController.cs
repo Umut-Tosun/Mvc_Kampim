@@ -13,13 +13,13 @@ using System.Web.Security;
 
 namespace Mvc_Proje_Kampi.Controllers
 {
-    
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
         Context c = new Context();
         AdminLoginManager adminloginmanager = new AdminLoginManager(new EfAdminDal());
-
+        WriterLoginManager wlm = new WriterLoginManager(new EfWriterDal());
         [HttpGet]
         public ActionResult Index()
         {
@@ -42,9 +42,42 @@ namespace Mvc_Proje_Kampi.Controllers
                 Session["AdminUserName"] = adminuserinfo.AdminUserName;
                 return RedirectToAction("Index", "AdminCategory");
             }
-           // ViewBag.ErrorMessage = "Kullanıcı Adı veya Şifre Yanlış";
+            else
+            {
+                RedirectToAction("Index");
+            }
+            ViewBag.ErrorMessage = "Kullanıcı Adı veya Şifre Yanlış";
             return View();
 
+        }
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult WriterLogin(Writer p)
+        {
+            var writeruserinfo = wlm.GetWriter(p.WriterMail,p.WriterPassword);
+
+            if (writeruserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
+                Session["WriterMail"] = writeruserinfo.WriterMail;
+                return RedirectToAction("MyContent", "WriterPanelContent");
+            }
+            else
+            {
+                RedirectToAction("Index");
+            }
+            // ViewBag.ErrorMessage = "Kullanıcı Adı veya Şifre Yanlış";
+            return View();
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Headings","Default");
         }
 
     }

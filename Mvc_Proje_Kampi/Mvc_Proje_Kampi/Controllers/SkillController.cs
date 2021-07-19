@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,5 +42,8 @@ namespace Mvc_Proje_Kampi.Controllers
 
             return View(cardValues);
         }
+        
+   
+        
     }
 }

@@ -25,7 +25,8 @@ namespace BusinessLayer.Concrete
 
         public void AdminDelete(Admin Admin)
         {
-            _adminDal.delete(Admin);
+            Admin.AdminStatus = false;
+            _adminDal.update(Admin);
         }
 
         public void AdminUpdate(Admin Admin)
@@ -41,7 +42,7 @@ namespace BusinessLayer.Concrete
 
         public List<Admin> GetList()
         {
-            throw new NotImplementedException();
+            return _adminDal.list();
         }
     }
 }
